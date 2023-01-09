@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Dashboard with table</title>
+</head>
+
+<body>
+    <div class="min-h-screen">
+
+        <nav class="bg-white border-gray-200 py-2.5 mx-20 md:block hidden">
+            <div class="container flex flex-wrap items-center justify-between">
+                <a href="https://lastmile.com/">
+                    <img src="https://b2b989d215c701ad63d7-288404e13f895703cf2798bf6ae95228.ssl.cf1.rackcdn.com/549854204589-350.png"
+                        class="mr-3 h-20 w-20" alt="Lastmile Logo" />
+                </a>
+                <div class="flex">
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="sr-only">Search icon</span>
+                        </div>
+                        <input type="text"
+                            class="block md:w-96 lg:w-96 xl:w-96 p-2 pl-10 outline-none text-sm text-gray-900 border border-gray-300 bg-gray-300"
+                            placeholder='Try serching "Teams, Groups, Agents"'>
+                    </div>
+
+                    <!-- Alert!!! Make this div a dropdown  incase it needs so -->
+                    <div class="flex items-center md:pl-6 lg:pl-6 xl:pl-4">
+                        <img src="https://woz-u.com/wp-content/uploads/2022/06/Evolution-of-Coding-scaled.jpg"
+                            class="rounded-full w-10 h-10" alt="profile icon" />
+                        <p class="pl-4 font-bold text-base">System Admin</p>
+                        <div class="pl-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="5"
+                                stroke="currentColor" class="w-2 h-2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- 2nd nav -->
+        <nav class="bg-gray-300 md:block hidden">
+            <div class="container flex flex-wrap items-center justify-between mx-auto">
+                <ul class="flex p-4 md:flex-row md:space-x-8 xl:space-x-16 md:mt-0 md:text-sm md:font-medium">
+                    <li>
+                        <a href="#"
+                            class="block py-2 md:bg-transparent text-gray-900 hover:text-gray-600 md:p-0">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 hover:text-gray-600 text-gray-400 md:p-0">Clients</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 hover:text-gray-600 text-gray-400 md:p-0">Product Categories</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 hover:text-gray-600 text-gray-400 md:p-0">Records</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 hover:text-gray-600 text-gray-400 md:p-0">Agents</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 hover:text-gray-600 text-gray-400 md:p-0">Groups</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 text-gray-400 hover:text-gray-600 md:p-0">Members</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 text-gray-400 hover:text-gray-600 md:p-0">Locations</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 text-gray-400 hover:text-gray-600 md:p-0">All
+                            Users</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 text-gray-400 hover:text-gray-600 md:p-0">Diagnosis</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 text-gray-400 hover:text-gray-600 md:p-0">Training</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 3rd nav -->
+        <nav class="bg-gray-50 md:block hidden">
+            <div class="container flex flex-wrap items-center justify-between mx-auto">
+                <div class="flex items-center">
+                    <ul class="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
+                        <li>
+                            <a href="#" class="text-gray-900 dark hover:underline">Summary</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 dark hover:underline">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 dark hover:underline">Activities</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 dark hover:underline">Timelines</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 dark hover:underline">People</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Balance -->
+                <div class="border-l-2 border-gray-400 p-4">
+                </div>
+
+                <div class="flex">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="#d1d5db" stroke-width="2">
+                        <path strokeLinecap="round" strokeLinejoin="round"
+                            d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
+                    </svg>
+                    <p class="text-gray-400 pl-4">Wallet Balance UGX: &nbsp;<span class="text-blue-500">5,432,750</span>
+                    </p>
+                </div>
+
+                <!-- Sms units -->
+                <div class="p-4">
+                    <div class="">
+                        <p class="text-gray-400">SMS Units: <span class="text-blue-500">750 &nbsp;</span>of 3500</p>
+                    </div>
+                </div>
+                <div class="border-l-2 border-gray-400 p-4">
+                </div>
+                <!-- menus or harmburg icon -->
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.5"
+                        stroke="#d1d5db" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Page -->
+        <main class="bg-gray-200 py-2">
+            <div class="sm:px-8 mx-4">
+                <div class="md:flex flex-col md:flex-row md:h-36 h-auto bg-white">
+                    <div class="w-1/2 md:flex flex-col md:flex-row ml-4 md:items-center lg:items-center xl:items-center">
+                        <div class="pb-4 md:pb-0 mr-2 lg:pb-0">
+                            <div class="relative w-36">
+                                <select class="block appearance-none w-full px-4 py-1 rounded shadow leading-tight outline focus:shadow-outline">
+                                    <option>Client</option>
+                                    <option>District</option>
+                                    <option>Projects</option>
+                                    <option>Amount</option>
+                                    <option>Volume</option>
+                                    <option>Date</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-900">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pb-4 md:pb-0 mr-2 lg:pb-0">
+                            <div class="relative w-36">
+                                <select class="block appearance-none w-full px-2 py-1 rounded shadow leading-tight outline focus:shadow-outline">
+                                    <option>Cycle Connect</option>
+                                    <option>District</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-900">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pb-4 md:pb-0 lg:pb-0">
+                            <div class="relative w-36">
+                                <input class="block appearance-none w-full px-2 py-1 rounded shadow leading-tight outline focus:shadow-outline" placeholder="Search by name"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 w-full flex md:items-center lg:items-center xl:items-center">
+                        <div class="text-sm ml-4 md:ml-0 lg:ml-0 pb-4 md:pb-0 lg:pb-0 flex md:no-wrap flex-wrap">
+                            <p class="pr-4 m-2">View By:</p>
+                            <button class="border border-gray-900 p-1 m-2">Model</button>
+                            <button class="border border-gray-900 p-1 m-2">Certification</button>
+                            <button class="border border-gray-900 p-1 m-2">Savings</button>
+                            <button class="border border-gray-900 p-1 m-2">Loans</button>
+                            <button class="border border-gray-900 p-1 m-2">Activity</button>
+                            <button class="border border-gray-900 p-1 m-2">Output</button>
+                            <button class="border border-gray-900 p-1 m-2">Gender</button>
+                            <button class="border border-gray-900 p-1 m-2">Youth</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="flex flex-wrap md:no-wrap bg-white">
+                    <div class="relative md:w-40 w-full p-4">
+                        <select
+                            class="appearance-none h-full rounded border block appearance-none w-full bg-white border-gray-900 text-gray-700 py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-800">
+                            <option>Client</option>
+                            <option>Meetings</option>
+                            <option>District</option>
+                            <option>Project</option>
+                            <option>Amount</option>
+                            <option>Volume</option>
+
+                        </select>
+                        <div
+                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="relative md:w-40 w-full">
+                        <select
+                            class="appearance-none h-full rounded border block appearance-none w-full bg-white border-gray-400 text-gray-700 py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                            <option>Cycle Connect</option>
+                        </select>
+                        <div
+                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="relative md:w-40">
+                        <select
+                            class="appearance-none h-full rounded border block appearance-none w-full bg-white border-gray-400 text-gray-700 py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>20</option>
+                        </select>
+                    </div>
+                    <div class="text-sm pt-4 pb-4 flex items-center">
+                        <p class="pr-4">View By:</p>
+                        <button class="border border-gray-900 p-1">Model</button>
+                        <button class="border border-gray-900 p-1">Certification</button>
+                        <button class="border border-gray-900 p-1">Savings</button>
+                        <button class="border border-gray-900 p-1">Loans</button>
+                        <button class="border border-gray-900 p-1">Activity</button>
+                        <button class="border border-gray-900 p-1">Output</button>
+                        <button class="border border-gray-900 p-1">Gender</button>
+                        <button class="border border-gray-900 p-1">Youth</button>
+                    </div>
+                </div> -->
+                <div class="py-2">
+                    <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                        <div class="inline-block min-w-full overflow-hidden">
+                            <table class="min-w-full leading-normal">
+                                <thead>
+                                    <tr>
+                                        <th
+                                            class="px-5 py-3 border-b-2 border-gray-200 bg-white text-left text-xs font-semibold text-gray-600  tracking-wider">
+                                            #ID
+                                        </th>
+                                        <th
+                                            class="px-5 py-3 border-b-2 border-gray-200 bg-white text-left text-xs font-semibold text-gray-600 tracking-wider">
+                                            Group Name
+                                        </th>
+                                        <th
+                                            class="px-5 py-3 border-b-2 border-gray-200 bg-white text-left text-xs font-semibold text-gray-600 tracking-wider">
+                                            Members
+                                        </th>
+                                        <th
+                                            class="px-5 py-3 border-b-2 border-gray-200 bg-white text-left text-xs font-semibold text-gray-600 tracking-wider">
+                                            Model
+                                        </th>
+                                        <th
+                                            class="px-5 py-3 border-b-2 border-gray-200 bg-white text-left text-xs font-semibold text-gray-600 tracking-wider">
+                                            Savings
+                                        </th>
+                                        <th
+                                            class="px-5 py-3 border-b-2 border-gray-200 bg-white text-left text-xs font-semibold text-gray-600 tracking-wider">
+                                            Loans
+                                        </th>
+                                        <th
+                                            class="px-5 py-3 border-b-2 border-gray-200 bg-white text-left text-xs font-semibold tracking-wider">
+                                            Activity
+                                        </th>
+                                        <th
+                                            class="px-5 py-3 border-b-2 border-gray-200 bg-white text-left text-xs font-semibold text-gray-600 tracking-wider">
+                                            Output
+                                        </th>
+                                        <th
+                                            class="px-5 py-3 border-b-2 border-gray-200 bg-white text-left text-xs font-semibold text-gray-600 tracking-wider">
+                                            Gender
+                                        </th>
+                                        <th
+                                            class="px-5 py-3 border-b-2 border-gray-200 bg-white text-left text-xs font-semibold text-gray-600 tracking-wider">
+                                            Reg Certificate
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            #2345
+                                        </td>
+                                        <td class="py-5 px-5 text-gray-900  border-b border-gray-200 bg-white text-sm">
+                                            Demo savings Group
+                                            <span>Blabla</span>
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            15
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            VSLA
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            3469000
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            8000
+                                        </td>
+                                        <td class="px-5 py-5 border-b text-red-600 border-gray-200 bg-white text-sm">
+                                            -4500
+                                        </td>
+                                        <td class="px-5 py-5 border-b text-blue-600 border-gray-200 bg-white text-sm">
+                                            +678000
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            F10/M8
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            0014-09-2020
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bg-gray-200 px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            #2345
+                                        </td>
+                                        <td
+                                            class="bg-gray-200  px-5 py-5 text-gray-900  border-b border-gray-200 bg-white text-sm">
+                                            Demo savings Group
+                                            <span>blabla</span>
+                                        </td>
+                                        <td
+                                            class="bg-gray-200  px-5 py-5 text-gray-900  border-b border-gray-200 bg-white text-sm">
+                                            14
+                                        </td>
+                                        <td class="bg-gray-200 px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            VSLA
+                                        </td>
+                                        <td class="bg-gray-200 px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            3469000
+                                        </td>
+                                        <td class="bg-gray-200 px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            8000
+                                        </td>
+                                        <td
+                                            class="bg-gray-200 px-5 py-5 border-b text-red-600 border-gray-200 bg-white text-sm">
+                                            -4500
+                                        </td>
+                                        <td
+                                            class="bg-gray-200 px-5 py-5 border-b text-blue-600 border-gray-200 bg-white text-sm">
+                                            +678000
+                                        </td>
+                                        <td class="bg-gray-200 px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            F10/M8
+                                        </td>
+                                        <td class="bg-gray-200 px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            0014-09-2020
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            #2345
+                                        </td>
+                                        <td class="px-5 py-5 text-gray-900  border-b border-gray-200 bg-white text-sm">
+                                            Demo savings Group
+                                            <span>Blabla</span>
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            15
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            VSLA
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            3469000
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            8000
+                                        </td>
+                                        <td class="px-5 py-5 border-b text-red-600 border-gray-200 bg-white text-sm">
+                                            -4500
+                                        </td>
+                                        <td class="px-5 py-5 border-b text-blue-600 border-gray-200 bg-white text-sm">
+                                            +678000
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            F10/M8
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            0014-09-2020
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bg-gray-200 px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            #2345
+                                        </td>
+                                        <td
+                                            class="bg-gray-200 px-5 py-5 text-gray-900  border-b border-gray-200 bg-white text-sm">
+                                            Demo savings Group
+                                            <span>blabla</span>
+                                        </td>
+                                        <td
+                                            class="bg-gray-200  px-5 py-5 text-gray-900  border-b border-gray-200 bg-white text-sm">
+                                            14
+                                        </td>
+                                        <td class="bg-gray-200 px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            VSLA
+                                        </td>
+                                        <td class="bg-gray-200 px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            3469000
+                                        </td>
+                                        <td class="bg-gray-200 px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            8000
+                                        </td>
+                                        <td
+                                            class="bg-gray-200 px-5 py-5 border-b text-red-600 border-gray-200 bg-white text-sm">
+                                            -4500
+                                        </td>
+                                        <td
+                                            class="bg-gray-200 px-5 py-5 border-b text-blue-600 border-gray-200 bg-white text-sm">
+                                            +678000
+                                        </td>
+                                        <td class="bg-gray-200 px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            F10/M8
+                                        </td>
+                                        <td class="bg-gray-200 px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            0014-09-2020
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            #2345
+                                        </td>
+                                        <td class="py-5 px-5 text-gray-900  border-b border-gray-200 bg-white text-sm">
+                                            <p>Demo Savings Group</p>
+                                            <p>blala</p>
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            15
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            VSLA
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            3469000
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            8000
+                                        </td>
+                                        <td class="px-5 py-5 border-b text-red-600 border-gray-200 bg-white text-sm">
+                                            -4500
+                                        </td>
+                                        <td class="px-5 py-5 border-b text-blue-600 border-gray-200 bg-white text-sm">
+                                            +678000
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            F10/M8
+                                        </td>
+                                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            0014-09-2020
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

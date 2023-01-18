@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Dashboard with table</title>
+</head>
+
+<body>
+    <div class="min-h-screen">
+
+        <nav class="bg-white border-gray-200 py-2.5 mx-4 lg:mx-4 xl:mx-4">
+            <div class="flex flex-wrap justify-between">
+                <a href="https://lastmile.com/">
+                    <img src="https://b2b989d215c701ad63d7-288404e13f895703cf2798bf6ae95228.ssl.cf1.rackcdn.com/549854204589-350.png"
+                        class="mr-3 h-20 w-20" alt="Lastmile Logo" />
+                </a>
+                <div class="flex flex-wrap items-center">
+                    <div class="relative md:block m-2">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="sr-only">Search icon</span>
+                        </div>
+                        <input type="text"
+                            class="block w-full rounded lg:w-96 xl:w-96 p-2 pl-10 outline-none text-sm text-gray-400 border text-xs lg:text-medium xl:text-medium border-gray-300 bg-gray-200"
+                            placeholder='Try serching "Teams, Groups, Agents"'>
+                    </div>
+
+                    <!-- Alert!!! Make this div a dropdown  incase it needs so -->
+                    <div class="flex items-center lg:pl-6 xl:pl-4 lg:m-0 xl:m-0 m-2">
+                        <img src="https://woz-u.com/wp-content/uploads/2022/06/Evolution-of-Coding-scaled.jpg"
+                            class="rounded-full w-10 h-10" alt="profile icon" />
+                        <p class="pl-4 font-bold text-base">System Admin</p>
+                        <div class="pl-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="5"
+                                stroke="currentColor" class="w-2 h-2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- 2nd nav -->
+        <nav class="bg-gray-300">
+            <div class="lg:mx-4 xl:mx-4">
+                <ul class="flex md:flex-row flex-wrap lg:space-x-8 xl:space-x-10 md:mt-0">
+                    <li>
+                        <a href="#"
+                            class="block lg:py-2 xl:py-2 m-2 md:m-1 lg:m-0 xl:m-0 focus:text-gray-600 hover:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block lg:py-2 xl:py-2 text-gray-900 m-2 md:m-1 lg:m-0 xl:m-0 focus:text-gray-600 hover:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Clients</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block lg:py-2 xl:py-2 m-2 md:m-1 lg:m-0 xl:m-0 hover:text-gray-600 text-gray-900 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Product
+                            Categories</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block lg:py-2 xl:py-2 m-2 md:m-1 lg:m-0 xl:m-0 hover:text-gray-600 text-gray-900 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Records</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block m-2 md:m-1 lg:m-0 xl:m-0 lg:py-2 xl:py-2 hover:text-gray-600 text-gray-900 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Agents</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block m-2 text-gray-900 md:m-1 lg:m-0 xl:m-0 lg:py-2 xl:py-2 hover:text-gray-600 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Groups</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block m-2 md:m-1 lg:m-0 xl:m-0 lg:py-2 xl:py-2 text-gray-900 hover:text-gray-600 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Members</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block m-2 md:m-1 lg:m-0 xl:m-0 lg:py-2 xl:py-2 text-gray-900 hover:text-gray-600 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Locations</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block m-2 md:m-1 lg:m-0 xl:m-0 lg:py-2 xl:py-2 text-gray-900 hover:text-gray-600 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">All
+                            Users</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block m-2 md:m-1 lg:m-0 xl:m-0 lg:py-2 xl:py-2 text-gray-900 hover:text-gray-600 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Diagnosis</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block m-2 md:m-1 lg:m-0 xl:m-0 lg:py-2 xl:py-2 text-gray-900 hover:text-gray-600 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Training</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="text-sm font-medium text-center border-b border-gray-200 flex justify-between mx-4">
+            <div class="flex">
+                <div class="border-r border-gray-300 flex items-center">
+                    <button type="button"
+                        class="text-blue-500 border font-medium border-gray-300 rounded-lg text-sm px-1 py-2 text-center inline-flex items-center mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                    </button>
+                    <span class="text-gray-500 font-light mr-2">Create Group</span>
+                </div>
+                <div>
+                    <ul class="flex flex-wrap -mb-px text-gray-500">
+                        <li class="mr-2">
+                            <a href="#"
+                                class="inline-block p-4 border-b-2 focus:border-blue-200 focus:text-gray-600 hover:text-gray-600 font-light hover:font-medium focus:font-bold hover:border-gray-300">All
+                                Groups</a>
+                        </li>
+                        <li class="mr-2">
+                            <a href="#"
+                                class="inline-block p-4 border-b-2 focus:border-blue-200 focus:text-gray-600 hover:text-gray-600 font-light hover:font-medium focus:font-bold hover:border-gray-300">Assign
+                                Group</a>
+                        </li>
+                        <li class="mr-2">
+                            <a href="#"
+                                class="inline-block p-4 border-b-2 focus:border-blue-200 focus:text-gray-600 hover:text-gray-600 font-light hover:font-medium focus:font-bold hover:border-gray-300">DFS
+                                Groups</a>
+                        </li>
+                        <li class="mr-2">
+                            <a href="#"
+                                class="inline-block p-4 border-b-2 focus:border-blue-200 focus:text-gray-600 hover:text-gray-600 font-light hover:font-medium focus:font-bold hover:border-gray-300">Linked
+                                Groups</a>
+                        </li>
+                        <li class="mr-2">
+                            <a href="#"
+                                class="inline-block p-4 border-b-2 focus:border-blue-200 focus:text-gray-600 hover:text-gray-600 font-light hover:font-medium focus:font-bold hover:border-gray-300">Disolved
+                                Groups</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex items-center text-gray-300 invisible lg:visible xl:visible sm:visible">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>                  
+            </div>
+        </nav>
+
+        <!-- Main Page -->
+        <main class="bg-gray-200 py-2">
+            <div class="mx-2">
+                <div class="flex-col lg:flex xl:flex lg:flex-row justify-between xl:flex-row md:h-36 h-auto bg-white">
+                    <div class="lg:w-1/2 xl:w1/2 w-full flex flex-wrap ml-4 lg:items-center xl:items-center pb-4 pt-4">
+                        <div class="pb-4 mr-2 lg:pt-0 xl:pt-0 lg:pb-0">
+                            <div class="relative lg:w-40 xl:w-40 w-48">
+                                <select
+                                    class="block appearance-none w-full px-4 py-1 rounded bg-white border border-gray-400 shadow shadow-inner focus:outline-none font-light text-gray-900">
+                                    <option>Client</option>
+                                    <option>District</option>
+                                    <option>Projects</option>
+                                    <option>Amount</option>
+                                    <option>Volume</option>
+                                    <option>Date</option>
+                                </select>
+                                <div
+                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pb-4 mr-2 lg:pb-0">
+                            <div class="relative lg:w-40 xl:w-40 w-48">
+                                <select
+                                    class="block appearance-none w-full px-2 py-1 rounded bg-white border border-gray-400 shadow shadow-inner focus:outline-none font-light text-gray-900">
+                                    <option>Cycle Connect</option>
+                                    <option>District</option>
+                                </select>
+                                <div
+                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pb-4 lg:pb-0">
+                            <div class="relative lg:w-36 xl:w-36 w-auto">
+                                <input
+                                    class="block appearance-none w-full px-2 py-1 rounded border border-gray-400 shadow shadow-inner focus:outline-none"
+                                    placeholder="Search by name" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mx-4 flex lg:items-center xl:items-center">
+                        <p class="pr-4">View By:</p>
+                        <div class="text-sm ml-4 md:ml-0 lg:ml-0 pb-4 md:pb-0 lg:pb-0 flex flex-wrap">
+                            <button
+                                class="border focus:text-gray-700 text-gray-500 focus:border-gray-900 border-gray-400 shadow shadow-inner rounded md:m-0 lg:rounded-r-none md:rounded-r-none xl:rounded-r-none p-1 m-1 lg:m-0 xl:m-0">Model</button>
+                            <button
+                                class="border focus:text-gray-700 text-gray-500 focus:border-gray-900 border-gray-400 rounded md:m-0 lg:rounded-none md:rounded-none xl:rounded-none p-1 m-1 lg:m-0 xl:m-0">Certification</button>
+                            <button
+                                class="border focus:text-gray-700 text-gray-500 focus:border-gray-900 border-gray-400 shadow shadow-inner lg:rounded-none md:rounded-none xl:rounded-none rounded p-1 m-1 md:m-0 lg:m-0 xl:m-0">Savings</button>
+                            <button
+                                class="border focus:text-gray-700 text-gray-500 focus:border-gray-900 border-gray-400 shadow shadow-inner lg:rounded-none md:rounded-none xl:rounded-none rounded p-1 m-1 md:m-0 lg:m-0 xl:m-0">Loans</button>
+                            <button
+                                class="border focus:text-gray-700 text-gray-500 focus:border-gray-900 border-gray-400 shadow shadow-inner lg:rounded-none md:rounded-none xl:rounded-none rounded p-1 m-1 md:m-0 lg:m-0 xl:m-0">Activity</button>
+                            <button
+                                class="border focus:text-gray-700 text-gray-500 focus:border-gray-900 border-gray-400 shadow shadow-inner lg:rounded-none md:rounded-none xl:rounded-none rounded p-1 m-1 md:m-0 lg:m-0 xl:m-0">Output</button>
+                            <button
+                                class="border focus:text-gray-700 text-gray-500 focus:border-gray-900 border-gray-400 shadow shadow-inner lg:rounded-none md:rounded-none xl:rounded-none rounded p-1 m-1 md:m-0 lg:m-0 xl:m-0">Gender</button>
+                            <button
+                                class="border focus:text-gray-700 text-gray-500 focus:border-gray-900 border-gray-400 shadow shadow-inner lg:rounded-l-none md:rounded-l-none xl:rounded-l-none rounded p-1 m-1 md:m-0 lg:m-0 xl:m-0">Youth</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- table -->
+                <div class="flex flex-col">
+                    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                        <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                            <div class="overflow">
+                                <table class="min-w-full">
+                                    <thead class="bg-white border-b">
+                                        <tr>
+                                            <th scope="col"
+                                                class="text-sm font-medium text-gray-400 px-6 py-4 text-left">
+                                                #ID
+                                            </th>
+                                            <th scope="col"
+                                                class="text-sm font-medium text-gray-400 px-6 py-4 text-left">
+                                                Group Name
+                                            </th>
+                                            <th scope="col"
+                                                class="text-sm font-medium text-gray-400 px-6 py-4 text-left">
+                                                Members
+                                            </th>
+                                            <th scope="col"
+                                                class="text-sm font-medium text-gray-400 px-6 py-4 text-left">
+                                                Model
+                                            </th>
+                                            <th scope="col"
+                                                class="text-sm font-medium text-gray-400 px-6 py-4 text-left">
+                                                Savings
+                                            </th>
+                                            <th scope="col"
+                                                class="text-sm font-medium text-gray-400 px-6 py-4 text-left">
+                                                Loans
+                                            </th>
+                                            <th scope="col"
+                                                class="text-sm font-medium text-gray-400 px-6 py-4 text-left">
+                                                Activity
+                                            </th>
+                                            <th scope="col"
+                                                class="text-sm font-medium text-gray-400 px-6 py-4 text-left">
+                                                Output
+                                            </th>
+                                            <th scope="col"
+                                                class="text-sm font-medium text-gray-400 px-6 py-4 text-left">
+                                                Gender
+                                            </th>
+                                            <th scope="col"
+                                                class="text-sm font-medium text-gray-400 px-6 py-4 text-left">
+                                                Reg Certificate
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="bg-white border-b">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-light text-gray-500">
+                                                # 2345</td>
+                                            <td class="text-sm text-gray-500 font-medium px-6 py-4 whitespace-nowrap">
+                                                Demo Savings Group
+                                                <p class="flex items-center font-light text-gray-400"><span> <svg
+                                                            xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                            class="w-3 h-3">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                                        </svg></span>North,Lira, London, Inida</p>
+                                            </td>
+                                            <td class="text-sm font-medium px-6 py-4 whitespace-nowrap">
+                                                <p class="flex items-center"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        fill="none" viewBox="0 0 24 24" stroke-width="1"
+                                                        stroke="currentColor" class="w-4 h-4">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                    </svg><span class="font-bold text-blue-500">15</span></p>
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                                                VSLA
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                                                3469000
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                                                800
+                                            </td>
+                                            <td class="text-sm text-red-500 font-medium px-6 py-4 whitespace-nowrap">
+                                                -45,000
+                                            </td>
+                                            <td class="text-sm text-blue-500 font-medium px-6 py-4 whitespace-nowrap">
+                                                +48,000
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                                                F10/M8
+                                            </td>
+                                            <td class="text-sm text-gray-400 px-6 py-4 whitespace-nowrap">
+                                                0014-09-2020
+                                            </td>
+                                        </tr>
+                                        <tr class="bg-gray-100 border-b">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-light text-gray-500">
+                                                # 2345</td>
+                                            <td class="text-sm text-gray-500 font-medium px-6 py-4 whitespace-nowrap">
+                                                Demo Savings Group
+                                                <p class="flex items-center font-light text-gray-400"><span> <svg
+                                                            xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                            class="w-3 h-3">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                                        </svg></span>North,Lira, London, Inida</p>
+                                            </td>
+                                            <td class="text-sm font-medium px-6 py-4 whitespace-nowrap">
+                                                <p class="flex items-center"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        fill="none" viewBox="0 0 24 24" stroke-width="1"
+                                                        stroke="currentColor" class="w-4 h-4">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                    </svg><span class="font-bold text-blue-500">15</span></p>
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                                                VSLA
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                                                3469000
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                                                800
+                                            </td>
+                                            <td class="text-sm text-red-500 font-medium px-6 py-4 whitespace-nowrap">
+                                                -45,000
+                                            </td>
+                                            <td class="text-sm text-blue-500 font-medium px-6 py-4 whitespace-nowrap">
+                                                +48,000
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                                                F10/M8
+                                            </td>
+                                            <td class="text-sm text-gray-400 px-6 py-4 whitespace-nowrap">
+                                                0014-09-2020
+                                            </td>
+                                        </tr>
+                                        <tr class="bg-white border-b">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-light text-gray-500">
+                                                # 2345</td>
+                                            <td class="text-sm text-gray-500 font-medium px-6 py-4 whitespace-nowrap">
+                                                Demo Savings Group
+                                                <p class="flex items-center font-light text-gray-400"><span> <svg
+                                                            xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                            class="w-3 h-3">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                                        </svg></span>North,Lira, London, Inida</p>
+                                            </td>
+                                            <td class="text-sm font-medium px-6 py-4 whitespace-nowrap">
+                                                <p class="flex items-center"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        fill="none" viewBox="0 0 24 24" stroke-width="1"
+                                                        stroke="currentColor" class="w-4 h-4">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                    </svg><span class="font-bold text-blue-500">15</span></p>
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                                                VSLA
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                                                3469000
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                                                800
+                                            </td>
+                                            <td class="text-sm text-red-500 font-medium px-6 py-4 whitespace-nowrap">
+                                                -45,000
+                                            </td>
+                                            <td class="text-sm text-blue-500 font-medium px-6 py-4 whitespace-nowrap">
+                                                +48,000
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                                                F10/M8
+                                            </td>
+                                            <td class="text-sm text-gray-400 px-6 py-4 whitespace-nowrap">
+                                                0014-09-2020
+                                            </td>
+                                        </tr>
+                                        <tr class="bg-gray-100 border-b">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-light text-gray-500">
+                                                # 2345</td>
+                                            <td class="text-sm text-gray-500 font-medium px-6 py-4 whitespace-nowrap">
+                                                Nyako Ber Youth
+                                                <p class="flex items-center font-light text-gray-400"><span> <svg
+                                                            xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                            class="w-3 h-3">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                                        </svg></span>North,Lira, London, Inida</p>
+                                            </td>
+                                            <td class="text-sm font-medium px-6 py-4 whitespace-nowrap">
+                                                <p class="flex items-center"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        fill="none" viewBox="0 0 24 24" stroke-width="1"
+                                                        stroke="currentColor" class="w-4 h-4">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                    </svg><span class="font-bold text-blue-500">15</span></p>
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                                                VSLA
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                                                3469000
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                                                800
+                                            </td>
+                                            <td class="text-sm text-red-500 font-medium px-6 py-4 whitespace-nowrap">
+                                                -45,000
+                                            </td>
+                                            <td class="text-sm text-blue-500 font-medium px-6 py-4 whitespace-nowrap">
+                                                +48,000
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                                                F10/M8
+                                            </td>
+                                            <td class="text-sm text-gray-400 px-6 py-4 whitespace-nowrap">
+                                                0014-09-2020
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

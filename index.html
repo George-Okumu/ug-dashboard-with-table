@@ -6,502 +6,565 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>lastmile</title>
+    <title>Dashboard with table</title>
 </head>
 
 <body>
     <div class="min-h-screen">
-
-        <nav class="bg-white border-gray-200 py-2.5 mx-4 lg:mx-4 xl:mx-4">
-            <div class="flex flex-wrap justify-between">
-                <div class="pr-4">
-                    <img src="https://b2b989d215c701ad63d7-288404e13f895703cf2798bf6ae95228.ssl.cf1.rackcdn.com/549854204589-350.png"
-                        class="w-10 h-10" alt="profile icon" />
+        <nav class="bg-gray-200 py-1">
+            <div class="flex justify-between bg-white mx-2 rounded">
+                <div class="text-gray-500 font-sm m-2">
+                    <p>Select an Agent by name to view commissions accrued from product sales.</p>
+                    <p>Alternatively pay your agents based on your agreed monthly commission</p>
                 </div>
-                <div class="flex flex-wrap items-center">
-                    <div class="relative md:block m-2">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="sr-only">Search icon</span>
-                        </div>
-                        <input type="text"
-                            class="block w-full rounded lg:w-96 xl:w-96 p-2 pl-10 outline-none text-sm text-gray-400 border text-xs lg:text-medium xl:text-medium border-gray-300 bg-gray-200"
-                            placeholder='Try serching "Teams, Groups, Agents"'>
-                    </div>
-
-                    <!-- Alert!!! Make this div a dropdown  incase it needs so -->
-                    <div class="flex items-center lg:pl-6 xl:pl-4 lg:m-0 xl:m-0 m-2">
-                        <img src="https://woz-u.com/wp-content/uploads/2022/06/Evolution-of-Coding-scaled.jpg"
-                            class="rounded-full w-10 h-10" alt="profile icon" />
-                        <p class="pl-2 font-light text-xs">System Admin</p>
-                        <div class="pl-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="5"
-                                stroke="currentColor" class="w-2 h-2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
-                            </svg>
-
-                        </div>
-                    </div>
+                <div class="flex items-center lg:mr-20 xl:mr-20">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="#d1d5db" stroke-width="2">
+                        <path strokeLinecap="round" strokeLinejoin="round"
+                            d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
+                    </svg>
+                    <p
+                        class="text-gray-600 text-xs medium:text-normal lg:text-normal xl:text-normal lg:font-medium xl:font-medium font-light pl-2">
+                        Wallet Balance UGX: &nbsp;<span class="text-blue-500 font-medium">5,432,750</span>
+                    </p>
                 </div>
-            </div>
-        </nav>
-
-
-        <!-- 2nd nav -->
-        <nav class="bg-gray-300">
-            <div class="lg:mx-4 xl:mx-4">
-                <ul class="flex md:flex-row flex-wrap lg:space-x-8 xl:space-x-10 md:mt-0">
-                    <li>
-                        <a href="#"
-                            class="block lg:py-2 xl:py-2 m-2 md:m-1 lg:m-0 xl:m-0 focus:text-gray-600 hover:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block lg:py-2 xl:py-2 text-gray-900 m-2 md:m-1 lg:m-0 xl:m-0 focus:text-gray-600 hover:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Clients</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block lg:py-2 xl:py-2 m-2 md:m-1 lg:m-0 xl:m-0 hover:text-gray-600 text-gray-900 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Product
-                            Categories</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block lg:py-2 xl:py-2 m-2 md:m-1 lg:m-0 xl:m-0 hover:text-gray-600 text-gray-900 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Records</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block m-2 md:m-1 lg:m-0 xl:m-0 lg:py-2 xl:py-2 hover:text-gray-600 text-gray-900 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Agents</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block m-2 text-gray-900 md:m-1 lg:m-0 xl:m-0 lg:py-2 xl:py-2 hover:text-gray-600 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Groups</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block m-2 md:m-1 lg:m-0 xl:m-0 lg:py-2 xl:py-2 text-gray-900 hover:text-gray-600 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Members</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block m-2 md:m-1 lg:m-0 xl:m-0 lg:py-2 xl:py-2 text-gray-900 hover:text-gray-600 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Locations</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block m-2 md:m-1 lg:m-0 xl:m-0 lg:py-2 xl:py-2 text-gray-900 hover:text-gray-600 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">All
-                            Users</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block m-2 md:m-1 lg:m-0 xl:m-0 lg:py-2 xl:py-2 text-gray-900 hover:text-gray-600 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Diagnosis</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block m-2 md:m-1 lg:m-0 xl:m-0 lg:py-2 xl:py-2 text-gray-900 hover:text-gray-600 focus:text-gray-600 md:p-0 font-light hover:font-medium focus:font-bold">Training</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <nav class="text-sm font-medium text-center border-b border-gray-200 flex justify-between mx-4">
-            <div class="flex">
-                <div class="flex items-center">
-                    <button type="button"
-                        class="text-blue-500 border font-medium border-gray-300 rounded-lg text-sm px-1 py-2 text-center inline-flex items-center mr-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-4 h-4">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                        </svg>
-                    </button>
-                    <span class="text-gray-500 font-light mr-2">Add New Client</span>
-                </div>
-                <div class="invisible mt-4 md:visible lg:visible xl:visible w-0.5 lg:h-6 xl:h-6 md:h-full bg-gray-400">
-                </div>
-                <div>
-                    <ul class="flex flex-wrap -mb-px text-gray-500">
-                        <li class="mr-2">
-                            <a href="#"
-                                class="inline-block p-4 border-b-2 focus:border-blue-200 focus:text-gray-600 hover:text-gray-600 font-light hover:font-medium focus:font-bold hover:border-gray-300">All Clients</a>
-                        </li>
-                        <li class="mr-2">
-                            <a href="#"
-                                class="inline-block p-4 border-b-2 focus:border-blue-200 focus:text-gray-600 hover:text-gray-600 font-light hover:font-medium focus:font-bold hover:border-gray-300">Finance</a>
-                        </li>
-                        <li class="mr-2">
-                            <a href="#"
-                                class="inline-block p-4 border-b-2 focus:border-blue-200 focus:text-gray-600 hover:text-gray-600 font-light hover:font-medium focus:font-bold hover:border-gray-300">Merchant</a>
-                        </li>
-                        <li class="mr-2">
-                            <a href="#"
-                                class="inline-block p-4 border-b-2 focus:border-blue-200 focus:text-gray-600 hover:text-gray-600 font-light hover:font-medium focus:font-bold hover:border-gray-300">Off.Taker</a>
-                        </li>
-                        <li class="mr-2">
-                            <a href="#"
-                                class="inline-block p-4 border-b-2 focus:border-blue-200 focus:text-gray-600 hover:text-gray-600 font-light hover:font-medium focus:font-bold hover:border-gray-300">NGO</a>
-                        </li>
-                        <li class="mr-2">
-                            <a href="#"
-                                class="inline-block p-4 border-b-2 focus:border-blue-200 focus:text-gray-600 hover:text-gray-600 font-light hover:font-medium focus:font-bold hover:border-gray-300">CBO</a>
-                        </li>
-                        <li class="mr-2">
-                            <a href="#"
-                                class="inline-block p-4 border-b-2 focus:border-blue-200 focus:text-gray-600 hover:text-gray-600 font-light hover:font-medium focus:font-bold hover:border-gray-300">Gov Ministry</a>
-                        </li>
-                        <li class="mr-2">
-                            <a href="#"
-                                class="inline-block p-4 border-b-2 focus:border-blue-200 focus:text-gray-600 hover:text-gray-600 font-light hover:font-medium focus:font-bold hover:border-gray-300">Sacco/Co-op</a>
-                        </li>
-                        <li class="mr-2">
-                            <a href="#"
-                                class="inline-block p-4 border-b-2 focus:border-blue-200 focus:text-gray-600 hover:text-gray-600 font-light hover:font-medium focus:font-bold hover:border-gray-300">Partner</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="flex items-center text-gray-300 invisible lg:visible xl:visible sm:visible">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                  </svg>                  
             </div>
         </nav>
 
         <!-- Main Page -->
         <main class="bg-gray-200 py-2">
-            <div class="mx-2">
-                <div class="grid md:grid-cols-4 grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 xl:gap-2 gap-4 pt-4">
+            <div class="flex flex-wrap">
+                <div class="w-full xl:w-8/12 lg:w-8/12 px-2">
+                    <div class="relative flex flex-col min-w-0 break-words w-full mb-8 shadow-lg rounded-lg bg-white">
+                        <div class="px-2 py-4 border-b-2">
+                            <div class="flex justify-between items-center">
+                                <div class="relative w-full max-w-full flex-grow flex-1">
+                                    <h3 class="font-bold text-xs">Agent</h3>
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="#9ca3af" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                    </svg>
 
-                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md px-4">
-                        <div class="pt-2">
-                            <h3 class="text-gray-900 text-xs font-bold">Finance</h3>
-                        </div>
-
-                        <div class="flex justify-between pt-4">
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
-                                  </svg>
-                                  
-                            </div>
-                            <div>
-                                <p class="font-light text-2xl">
-                                    03
-                                </p>
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <a class="uppercase text-gray-400 text-xs inline-flex items-center" href=""> <i class="fa-solid fa-circle-arrow-right"></i> View All</a>
+                        <div class="block w-full overflow-x-auto">
+                            <table class="items-center w-full bg-transparent border-collapse">
+                                <thead>
+                                    <tr>
+                                        <th
+                                            class="align-middle px-4 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            Name</th>
+                                        <th
+                                            class="align-middle py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            District</th>
+                                        <th
+                                            class="align-middle py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            Groups</th>
+                                        <th
+                                            class="align-middle py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            Diagnosis</th>
+                                        <th
+                                            class="align-middle py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            mapping</th>
+                                        <th
+                                            class="align-middle py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            orders</th>
+                                        <th
+                                            class="align-middle py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            rating</th>
+                                        <th
+                                            class="align-middle py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            commission</th>
+                                        <th
+                                            class="align-middle py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-gray-100">
+                                        <td class="border-t-0 align-middle border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">
+                                                <input id="default-checkbox" type="checkbox" value=""
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100  rounded">
+                                                <label for="default-checkbox"
+                                                    class="ml-2 text-sm font-medium text-gray-900">Rebbecca
+                                                    Okumu</label>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm text-gray-600 whitespace-nowrap p-4">
+                                            <div class="flex items-center">Tonoro</div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0  text-sm whitespace-nowrap p-4">
+                                            91
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            <div class="flex">
+                                                <p class="font-bold text-blue-600">1</p>
+                                                <p class="text-orange-600 font-bold">*</p>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 font-bold">
+                                            870000
+                                        </td>
+                                        <td
+                                            class="border-t-0 text-sm text-green-600 font-medium px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            Pending
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white">
+                                        <td class="border-t-0 align-middle border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">
+                                                <input id="default-checkbox" type="checkbox" value=""
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100  rounded">
+                                                <label for="default-checkbox"
+                                                    class="ml-2 text-sm font-medium text-gray-900">Lucas
+                                                    Okumu</label>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm text-gray-600 whitespace-nowrap p-4">
+                                            Tonoro
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">8</div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm  whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 text-sm align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            91
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            <div class="flex">
+                                                <p class="font-bold text-blue-600">1</p>
+                                                <p class="text-orange-600 font-bold">*</p>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle text-sm border-l-0 border-r-0 whitespace-nowrap p-4 font-bold">
+                                            870000
+                                        </td>
+                                        <td
+                                            class="border-t-0  text-sm text-blue-600 font-medium px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            Paid
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-gray-100">
+                                        <td class="border-t-0 align-middle border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">
+                                                <input id="default-checkbox" type="checkbox" value=""
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100  rounded">
+                                                <label for="default-checkbox"
+                                                    class="ml-2 text-sm font-medium text-gray-900">James
+                                                    Okumu</label>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm text-gray-600 whitespace-nowrap p-4">
+                                            Jinja
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            91
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            <div class="flex">
+                                                <p class="font-bold text-blue-600">1</p>
+                                                <p class="text-orange-600 font-bold">*</p>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 text-sm align-middle border-l-0 border-r-0 whitespace-nowrap p-4 font-bold">
+                                            870000
+                                        </td>
+                                        <td
+                                            class="border-t-0 text-sm text-green-600 font-medium px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            Pending
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white">
+                                        <td class="border-t-0 align-middle border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">
+                                                <input id="default-checkbox" type="checkbox" value=""
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100  rounded">
+                                                <label for="default-checkbox"
+                                                    class="ml-2 text-sm font-medium text-gray-900">Lucas
+                                                    Okumu</label>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm text-gray-600 whitespace-nowrap p-4">
+                                            Tonoro
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">8</div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm  whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 text-sm align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            91
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            <div class="flex">
+                                                <p class="font-bold text-blue-600">1</p>
+                                                <p class="text-orange-600 font-bold">*</p>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle text-sm border-l-0 border-r-0 whitespace-nowrap p-4 font-bold">
+                                            870000
+                                        </td>
+                                        <td
+                                            class="border-t-0  text-sm text-blue-600 font-medium px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            Paid
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-gray-100">
+                                        <td class="border-t-0 align-middle border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">
+                                                <input id="default-checkbox" type="checkbox" value=""
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100  rounded">
+                                                <label for="default-checkbox"
+                                                    class="ml-2 text-sm font-medium text-gray-900">Rebbecca
+                                                    Okumu</label>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm text-gray-600 whitespace-nowrap p-4">
+                                            Tonoro
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 text-sm px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            91
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            <div class="flex">
+                                                <p class="font-bold text-blue-600">1</p>
+                                                <p class="text-orange-600 font-bold">*</p>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4 text-sm font-bold">
+                                            870000
+                                        </td>
+                                        <td
+                                            class="border-t-0 text-green-600 text-sm font-medium px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            Pending
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white">
+                                        <td class="border-t-0 align-middle border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">
+                                                <input id="default-checkbox" type="checkbox" value=""
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100  rounded">
+                                                <label for="default-checkbox"
+                                                    class="ml-2 text-sm font-medium text-gray-900">Brian
+                                                    Okumu</label>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm text-gray-600 whitespace-nowrap p-4">
+                                            Tonoro
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            <div class="flex">
+                                                <p class="font-bold text-blue-600">0</p>
+                                                <p class="text-orange-600 font-bold">*</p>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 text-sm align-middle border-l-0 border-r-0 whitespace-nowrap p-4 font-bold">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 text-orange-600 text-sm font-medium px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            Inactive
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-gray-100">
+                                        <td class="border-t-0 align-middle border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">
+                                                <input id="default-checkbox" type="checkbox" value=""
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100  rounded">
+                                                <label for="default-checkbox"
+                                                    class="ml-2 text-sm font-medium text-gray-900">Rebbecca
+                                                    Okumu</label>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm text-gray-600 whitespace-nowrap p-4">
+                                            Tonoro
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 text-sm px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            91
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            <div class="flex">
+                                                <p class="font-bold text-blue-600">1</p>
+                                                <p class="text-orange-600 font-bold">*</p>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4 text-sm font-bold">
+                                            870000
+                                        </td>
+                                        <td
+                                            class="border-t-0 text-green-600 text-sm font-medium px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            Pending
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white">
+                                        <td class="border-t-0 align-middle border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">
+                                                <input id="default-checkbox" type="checkbox" value=""
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100  rounded">
+                                                <label for="default-checkbox"
+                                                    class="ml-2 text-sm font-medium text-gray-900">Brian
+                                                    Okumu</label>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm text-gray-600 whitespace-nowrap p-4">
+                                            Tonoro
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            <div class="flex">
+                                                <p class="font-bold text-blue-600">0</p>
+                                                <p class="text-orange-600 font-bold">*</p>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 text-sm align-middle border-l-0 border-r-0 whitespace-nowrap p-4 font-bold">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 text-orange-600 text-sm font-medium px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            Inactive
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-
-
-                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md px-4">
-                        <div class="pt-2">
-                            <h3 class="text-gray-900 text-xs font-bold">Merchant</h3>
-                        </div>
-
-                        <div class="flex justify-between pt-4">
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" />
-                                  </svg>
-                                  
-                                  
-                            </div>
-                            <div>
-                                <p class="font-light text-2xl">
-                                    19
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <a class="uppercase text-gray-400 text-xs inline-flex items-center" href=""> <i class="fa-solid fa-circle-arrow-right"></i> View All</a>
-                        </div>
-                    </div>
-
-
-                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md px-4">
-                        <div class="pt-2">
-                            <h3 class="text-gray-900 text-xs font-bold">Off-Taker</h3>
-                        </div>
-
-                        <div class="flex justify-between pt-4">
-                            <div>   
-                                <!-- Place your buy svg here                                -->
-                                 <div class="inline-flex items-center rounded-full bg-gray-700 text-xs text-white">Buy</div> 
-                            </div>
-                            <div>
-                                <p class="font-light text-2xl">
-                                    342
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <a class="uppercase text-gray-400 text-xs inline-flex items-center" href=""> <i class="fa-solid fa-circle-arrow-right"></i> View All</a>
-                        </div>
-                    </div>
-
-                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md px-4">
-                        <div class="pt-2">
-                            <h3 class="text-gray-900 text-xs font-black">NGO</h3>
-                        </div>
-
-                        <div class="flex justify-between pt-4">
-                            <div>   
-                                <p class="text-xs font-bold">NGO</p>
-                            </div>
-                            <div>
-                                <p class="font-light text-2xl">
-                                    342
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <a class="uppercase text-gray-400 text-xs inline-flex items-center" href=""> <i class="fa-solid fa-circle-arrow-right"></i> View All</a>
-                        </div>
-                    </div>
-
-                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md px-4">
-                        <div class="pt-2">
-                            <h3 class="text-gray-900 text-xs font-black">CBO</h3>
-                        </div>
-
-                        <div class="flex justify-between pt-4">
-                            <div>   
-                                <p class="text-xs font-bold">CBO</p>
-                            </div>
-                            <div>
-                                <p class="font-light text-2xl">
-                                    35
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <a class="uppercase text-gray-400 text-xs inline-flex items-center" href=""> <i class="fa-solid fa-circle-arrow-right"></i> View All</a>
-                        </div>
-                    </div>
-
-                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md px-4">
-                        <div class="pt-2">
-                            <h3 class="text-gray-900 text-xs font-black">Gov Ministry</h3>
-                        </div>
-
-                        <div class="flex justify-between pt-4">
-                            <div>   
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3.75v16.5M2.25 12h19.5M6.375 17.25a4.875 4.875 0 004.875-4.875V12m6.375 5.25a4.875 4.875 0 01-4.875-4.875V12m-9 8.25h16.5a1.5 1.5 0 001.5-1.5V5.25a1.5 1.5 0 00-1.5-1.5H3.75a1.5 1.5 0 00-1.5 1.5v13.5a1.5 1.5 0 001.5 1.5zm12.621-9.44c-1.409 1.41-4.242 1.061-4.242 1.061s-.349-2.833 1.06-4.242a2.25 2.25 0 013.182 3.182zM10.773 7.63c1.409 1.409 1.06 4.242 1.06 4.242S9 12.22 7.592 10.811a2.25 2.25 0 113.182-3.182z" />
-                                  </svg>
-                                  
-                            </div>
-                            <div>
-                                <p class="font-light text-2xl">
-                                    02
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <a class="uppercase text-gray-400 text-xs inline-flex items-center" href=""> <i class="fa-solid fa-circle-arrow-right"></i> View All</a>
-                        </div>
-                    </div>
-
-                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md px-4">
-                        <div class="pt-2">
-                            <h3 class="text-gray-900 text-xs font-black">Sacco/Co-op</h3>
-                        </div>
-
-                        <div class="flex justify-between pt-4">
-                            <div>   
-                                <p class="text-xs font-bold">SACCO</p>
-                            </div>
-                            <div>
-                                <p class="font-light text-2xl">
-                                    27
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <a class="uppercase text-gray-400 text-xs inline-flex items-center" href=""> <i class="fa-solid fa-circle-arrow-right"></i> View All</a>
-                        </div>
-                    </div>
-
-                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md px-4">
-                        <div class="pt-2">
-                            <h3 class="text-gray-900 text-xs font-black">Partner</h3>
-                        </div>
-
-                        <div class="flex justify-between pt-4">
-                            <div>   
-                                <i class="fa-solid fa-handshake"></i>
-                            </div>
-                            <div>
-                                <p class="font-light text-2xl">
-                                    35
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <a class="uppercase text-gray-400 text-xs inline-flex items-center" href=""> <i class="fa-solid fa-circle-arrow-right"></i> View All</a>
-                        </div>
-                    </div>
-                    
                 </div>
-                <!-- table -->
-                <div class="">
-                    <div class="overflow-x-none sm:-mx-6 lg:-mx-8">
-                        <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
-                            <div class="overflow">
-                                <table class="min-w-full">
-                                    <caption class="p-5 bg-white font-semibold text-left">
-                                        <div class="flex items-center">
-                                            <input class="border placeholder-gray-300 rounded border-gray-300 p-2 text-xs font-medium" type="text" placeholder="Search by name">
-
-                                            <p class="inline-flex items-center pl-6 font-light text-sm text-gray-400"> Showing <span class="underline text-gray-600 font-bold text-xs pl-2 pr-2">10</span> Entries &DownArrow;</p>
-                                        </div>
-                                    </caption>
-                                    <thead class="bg-white border-b">
-                                        <tr>
-                                            <th scope="col"
-                                                class="text-sm font-medium text-gray-400 px-6 py-4 text-left">
-                                                #ID
-                                            </th>
-                                            <th scope="col"
-                                                class="text-sm font-medium text-gray-400 px-6 py-4 text-left">
-                                                Name
-                                            </th>
-                                            <th scope="col"
-                                                class="text-sm font-medium text-gray-400 px-6 py-4 text-left">
-                                                Description
-                                            </th>
-                                            <th scope="col"
-                                                class="text-sm font-medium text-gray-400 px-6 py-4 text-left">
-                                                Reg Date
-                                            </th>
-                                            <th scope="col"
-                                                class="text-sm font-medium text-gray-400 px-6 py-4 text-left">
-                                                Category
-                                            </th>
-                                            <th scope="col"
-                                                class="text-sm font-medium text-gray-400 px-6 py-4 text-left">
-                                                Created by
-                                            </th>
-                                            <th scope="col"
-                                                class="text-sm font-medium text-gray-400 px-6 py-4 text-left">
-                                                Action
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="bg-gray-100 border-b">
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-light text-gray-500">
-                                                # 2345</td>
-                                            <td class="text-sm text-gray-400 font-medium px-6 py-4 whitespace-nowrap">
-                                                Hunger Fighters Uganda
-                                                <p class="flex items-center font-light text-gray-300"><span> <svg
-                                                            xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                            class="w-3 h-3">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                                d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                                                        </svg></span>Uganda, Kampala, HaimaRd</p>
-                                            </td>
-                                            <td class="text-sm text-gray-400 px-4 py-4">
-                                                <p>A not-for profit organisation persuing a
-                                                     vision of a hunger and malnutrition free Uganda</p>
-                                            </td>
-                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
-                                                18, Apr 2022
-                                            </td>
-                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap text-right">
-                                                NGO
-                                            </td>
-                                            <td class="text-sm text-gray-400 px-6 py-4 whitespace-nowrap">
-                                                admin@atafrica.net
-                                            </td>
-                                            <td class="text-sm text-red-500 font-medium px-6 py-4">
-                                                <select
-                                                class="bg-gray-200 w-32 border border-gray-300 text-gray-400 text-sm rounded-lg p-1">
-                                                <option selected>De-activate</option>
-                                            </select>
-                                            </td>
-                                        </tr>
-                                        <tr class="bg-white border-b">
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-light text-gray-500">
-                                                # 2345</td>
-                                            <td class="text-sm text-gray-400 font-medium px-6 py-4 whitespace-nowrap">
-                                                Leading Research Training
-                                                <p class="flex items-center font-light text-gray-300"><span> <svg
-                                                            xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                            class="w-3 h-3">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                                d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                                                        </svg></span>Uganda, Kampala, HaimaRd</p>
-                                            </td>
-                                            <td class="text-sm text-gray-400 px-4 py-4">
-                                                <p>LEading research training center in W Uganda that is empowering youth for property and skilling them</p>
-                                            </td>
-                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
-                                                03, Mar 2021
-                                            </td>
-                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap text-right">
-                                                CBO
-                                            </td>
-                                            <td class="text-sm text-gray-400 px-6 py-4 whitespace-nowrap">
-                                                jojikan@atafrica.net
-                                            </td>
-                                            <td class="text-sm text-red-500 font-medium px-6 py-4">
-                                                <select
-                                                class="bg-gray-200 w-32 border border-gray-300 text-gray-400 text-sm rounded-lg p-1">
-                                                <option selected>View</option>
-                                            </select>
-                                            </td>
-                                        </tr>
-                                        <tr class="bg-gray-100 border-b">
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-light text-gray-500">
-                                                # 2345</td>
-                                            <td class="text-sm text-gray-400 font-medium px-6 py-4 whitespace-nowrap">
-                                                Leading Research Training
-                                                <p class="flex items-center font-light text-gray-300"><span> <svg
-                                                            xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                            class="w-3 h-3">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                                d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                                                        </svg></span>Uganda, Kampala, HaimaRd</p>
-                                            </td>
-                                            <td class="text-sm whitespace-nowrap lg:whitespace-wrap text-gray-400 px-4 py-4">
-                                                <p>Leading research training center in W Uganda that is empowering youth for property and skilling them</p>
-                                            </td>
-                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
-                                                03, Mar 2021
-                                            </td>
-                                            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap text-right">
-                                                Merchant
-                                            </td>
-                                            <td class="text-sm text-gray-400 px-6 py-4 whitespace-nowrap">
-                                                jojikan@atafrica.net
-                                            </td>
-                                            <td class="text-sm text-red-500 font-medium px-6 py-4">
-                                                <select
-                                                class="bg-gray-200 w-32 border border-gray-300 text-gray-400 text-sm rounded-lg p-1">
-                                                <option selected>View</option>
-                                            </select>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                <div class="w-full xl:w-4/12 lg:w-4/12 px-2">
+                    <div class="relative flex flex-col min-w-0 break-words w-full mb-8 shadow-lg rounded-lg bg-white">
+                        <div class="px-2 py-4 border-b-2">
+                            <div class="flex items-center">
+                                <div class="relative w-full max-w-full flex-grow flex-1">
+                                    <h3 class="font-bold text-xs">Commission Due</h3>
+                                </div>
                             </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between pr-4 mt-2 mb-2">
+                                <div></div>
+                                <div class="flex items-center">
+                                    <div
+                                        class="w-8 h-8 bg-orange-400 rounded-full inline-flex items-center justify-center text-xs text-green-600">
+                                        RO
+                                    </div>
+                                    <h3 class="font-bold text-sm pl-4">Rebecca Okumu</h3>
+                                </div>
+                            </div>
+                            <div class="text-xs pr-4 text-right">
+                                <p class="text-gray-400">Premium SOYA Beans</p>
+                                <p class="text-gray-400">Units: 13</p>
+                                <p class="text-gray-400">Date: 12 Jul 2022</p>
+                                <p class="font-bold">20,000</p>
+                            </div>
+                            <div class="text-right text-xs pr-4 pt-4">
+                                <p class="text-gray-400">African Fodder Maize</p>
+                                <p class="text-gray-400">Units: 13</p>
+                                <p class="text-gray-400">Date: 12 Jul 2022</p>
+                                <p class="font-bold">58,000</p>
+                            </div>
+                            <div class="text-right text-xs pr-4 pt-4">
+                                <p class="text-gray-400">African Fodder Maize</p>
+                                <p class="text-gray-400">Units: 25</p>
+                                <p class="text-gray-400">Date: 12 Jul 2022</p>
+                                <p class="font-bold">87000</p>
+                            </div>
+                            <div class="text-right pr-4 pt-2">
+                                <p class="text-gray-700 font-bold text-normal">Total Commission Due: <span
+                                        class="text-blue-700 font-bold">87000</span></p>
+                            </div>
+
+                            <div class="text-right text-xs pr-4 pt-2">
+                                <div class="mb-2">
+                                    <label class="block text-gray-400 text-sm font-bold mb-2" for="commissionreason">
+                                        Commission Description:
+                                    </label>
+                                    <input
+                                        class="border border-gray-400 focus:outline rounded w-3/4 py-2 px-3 text-gray-700"
+                                        id="commissionreason" type="text" placeholder="Type reason...">
+                                </div>
+                            </div>
+                            <div class="text-right pr-4">
+                                <button
+                                    class="p-1 w-1/2 rounded text-white bg-blue-600 m-1 border-2 border-gray-600">Pay
+                                    Commission</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="relative flex flex-col min-w-0 break-words w-full mb-8 shadow-lg rounded-lg bg-white">
+                        <div class="px-2 py-4 border-b-2">
+                            <div class="flex items-center">
+                                <div class="relative w-full max-w-full flex-grow flex-1">
+                                    <h3 class="font-bold text-xs">Monthly Commission</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between pr-4 mt-2 mb-2">
+                                <div></div>
+                                <div class="flex items-center">
+                                    <div
+                                        class="w-8 h-8 bg-orange-400 rounded-full inline-flex items-center justify-center text-xs text-green-600">
+                                        RO
+                                    </div>
+                                    <h3 class="font-bold text-sm pl-4">Rebecca Okumu</h3>
+                                </div>
+                            </div>
+                            <div class="text-right text-xs pr-4 pt-2">
+                                <div class="mb-2">
+                                    <label class="block text-gray-400 text-sm font-bold mb-2" for="commissionreason">
+                                        Commission Description:
+                                    </label>
+                                    <input
+                                        class="border border-gray-400 focus:outline rounded w-3/4 py-2 px-3 text-gray-700"
+                                        id="commissionreason" type="text" placeholder="Type reason...">
+                                </div>
+                            </div>
+                            <div class="text-right text-xs pr-4 pt-2">
+                                <div class="mb-2">
+                                    <label class="block text-gray-400 text-sm font-bold mb-2" for="commissionamount">
+                                        Commission Amount:
+                                    </label>
+                                    <input
+                                        class="border border-gray-400 focus:outline rounded w-3/4 py-2 px-3 text-gray-700"
+                                        id="commissionamount" type="text" placeholder="Enter Amount...">
+                                </div>
+                            </div>
+                            <div class="text-right pr-4">
+                                <button
+                                    class="p-1 w-1/2 rounded text-white bg-blue-600 m-1 border-2 border-gray-600">Pay
+                                    Commission</button>
+                            </div>
+
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Dashboard with table</title>
+</head>
+
+<body>
+    <div class="min-h-screen">
+        <nav class="bg-gray-200 py-1">
+            <div class="flex justify-between bg-white mx-2 rounded">
+                <div class="text-gray-500 font-sm m-2">
+                    <p>Select an Agent by name to view commissions accrued from product sales.</p>
+                    <p>Alternatively pay your agents based on your agreed monthly commission</p>
+                </div>
+                <div class="flex items-center lg:mr-20 xl:mr-20">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="#d1d5db" stroke-width="2">
+                        <path strokeLinecap="round" strokeLinejoin="round"
+                            d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
+                    </svg>
+                    <p
+                        class="text-gray-600 text-xs medium:text-normal lg:text-normal xl:text-normal lg:font-medium xl:font-medium font-light pl-2">
+                        Wallet Balance UGX: &nbsp;<span class="text-blue-500 font-medium">5,432,750</span>
+                    </p>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Page -->
+        <main class="bg-gray-200 py-2">
+            <div class="flex flex-wrap">
+                <div class="w-full xl:w-8/12 lg:w-8/12 px-2">
+                    <div class="relative flex flex-col min-w-0 break-words w-full mb-8 shadow-lg rounded-lg bg-white">
+                        <div class="px-2 py-4 border-b-2">
+                            <div class="flex justify-between items-center">
+                                <div class="relative w-full max-w-full flex-grow flex-1">
+                                    <h3 class="font-bold text-xs">Agent</h3>
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="#9ca3af" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block w-full overflow-x-auto">
+                            <table class="items-center w-full bg-transparent border-collapse">
+                                <thead>
+                                    <tr>
+                                        <th
+                                            class="align-middle px-4 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            Name</th>
+                                        <th
+                                            class="align-middle py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            District</th>
+                                        <th
+                                            class="align-middle py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            Groups</th>
+                                        <th
+                                            class="align-middle py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            Diagnosis</th>
+                                        <th
+                                            class="align-middle py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            mapping</th>
+                                        <th
+                                            class="align-middle py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            orders</th>
+                                        <th
+                                            class="align-middle py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            rating</th>
+                                        <th
+                                            class="align-middle py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            commission</th>
+                                        <th
+                                            class="align-middle py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left text-gray-500">
+                                            status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-gray-100">
+                                        <td class="border-t-0 align-middle border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">
+                                                <input id="default-checkbox" type="checkbox" value=""
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100  rounded">
+                                                <label for="default-checkbox"
+                                                    class="ml-2 text-sm font-medium text-gray-900">Rebbecca
+                                                    Okumu</label>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm text-gray-600 whitespace-nowrap p-4">
+                                            <div class="flex items-center">Tonoro</div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0  text-sm whitespace-nowrap p-4">
+                                            91
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            <div class="flex">
+                                                <p class="font-bold text-blue-600">1</p>
+                                                <p class="text-orange-600 font-bold">*</p>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 font-bold">
+                                            870000
+                                        </td>
+                                        <td
+                                            class="border-t-0 text-sm text-green-600 font-medium px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            Pending
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white">
+                                        <td class="border-t-0 align-middle border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">
+                                                <input id="default-checkbox" type="checkbox" value=""
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100  rounded">
+                                                <label for="default-checkbox"
+                                                    class="ml-2 text-sm font-medium text-gray-900">Lucas
+                                                    Okumu</label>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm text-gray-600 whitespace-nowrap p-4">
+                                            Tonoro
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">8</div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm  whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 text-sm align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            91
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            <div class="flex">
+                                                <p class="font-bold text-blue-600">1</p>
+                                                <p class="text-orange-600 font-bold">*</p>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle text-sm border-l-0 border-r-0 whitespace-nowrap p-4 font-bold">
+                                            870000
+                                        </td>
+                                        <td
+                                            class="border-t-0  text-sm text-blue-600 font-medium px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            Paid
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-gray-100">
+                                        <td class="border-t-0 align-middle border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">
+                                                <input id="default-checkbox" type="checkbox" value=""
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100  rounded">
+                                                <label for="default-checkbox"
+                                                    class="ml-2 text-sm font-medium text-gray-900">James
+                                                    Okumu</label>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm text-gray-600 whitespace-nowrap p-4">
+                                            Jinja
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            91
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            <div class="flex">
+                                                <p class="font-bold text-blue-600">1</p>
+                                                <p class="text-orange-600 font-bold">*</p>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 text-sm align-middle border-l-0 border-r-0 whitespace-nowrap p-4 font-bold">
+                                            870000
+                                        </td>
+                                        <td
+                                            class="border-t-0 text-sm text-green-600 font-medium px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            Pending
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white">
+                                        <td class="border-t-0 align-middle border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">
+                                                <input id="default-checkbox" type="checkbox" value=""
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100  rounded">
+                                                <label for="default-checkbox"
+                                                    class="ml-2 text-sm font-medium text-gray-900">Lucas
+                                                    Okumu</label>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm text-gray-600 whitespace-nowrap p-4">
+                                            Tonoro
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">8</div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm  whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 text-sm align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            91
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            <div class="flex">
+                                                <p class="font-bold text-blue-600">1</p>
+                                                <p class="text-orange-600 font-bold">*</p>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle text-sm border-l-0 border-r-0 whitespace-nowrap p-4 font-bold">
+                                            870000
+                                        </td>
+                                        <td
+                                            class="border-t-0  text-sm text-blue-600 font-medium px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            Paid
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-gray-100">
+                                        <td class="border-t-0 align-middle border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">
+                                                <input id="default-checkbox" type="checkbox" value=""
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100  rounded">
+                                                <label for="default-checkbox"
+                                                    class="ml-2 text-sm font-medium text-gray-900">Rebbecca
+                                                    Okumu</label>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm text-gray-600 whitespace-nowrap p-4">
+                                            Tonoro
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 text-sm px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            91
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            <div class="flex">
+                                                <p class="font-bold text-blue-600">1</p>
+                                                <p class="text-orange-600 font-bold">*</p>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4 text-sm font-bold">
+                                            870000
+                                        </td>
+                                        <td
+                                            class="border-t-0 text-green-600 text-sm font-medium px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            Pending
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white">
+                                        <td class="border-t-0 align-middle border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">
+                                                <input id="default-checkbox" type="checkbox" value=""
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100  rounded">
+                                                <label for="default-checkbox"
+                                                    class="ml-2 text-sm font-medium text-gray-900">Brian
+                                                    Okumu</label>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm text-gray-600 whitespace-nowrap p-4">
+                                            Tonoro
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            <div class="flex">
+                                                <p class="font-bold text-blue-600">0</p>
+                                                <p class="text-orange-600 font-bold">*</p>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 text-sm align-middle border-l-0 border-r-0 whitespace-nowrap p-4 font-bold">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 text-orange-600 text-sm font-medium px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            Inactive
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-gray-100">
+                                        <td class="border-t-0 align-middle border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">
+                                                <input id="default-checkbox" type="checkbox" value=""
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100  rounded">
+                                                <label for="default-checkbox"
+                                                    class="ml-2 text-sm font-medium text-gray-900">Rebbecca
+                                                    Okumu</label>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm text-gray-600 whitespace-nowrap p-4">
+                                            Tonoro
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            8
+                                        </td>
+                                        <td
+                                            class="border-t-0 text-sm px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            91
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            <div class="flex">
+                                                <p class="font-bold text-blue-600">1</p>
+                                                <p class="text-orange-600 font-bold">*</p>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4 text-sm font-bold">
+                                            870000
+                                        </td>
+                                        <td
+                                            class="border-t-0 text-green-600 text-sm font-medium px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            Pending
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white">
+                                        <td class="border-t-0 align-middle border-r-0 text-xs whitespace-nowrap p-4">
+                                            <div class="flex items-center">
+                                                <input id="default-checkbox" type="checkbox" value=""
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100  rounded">
+                                                <label for="default-checkbox"
+                                                    class="ml-2 text-sm font-medium text-gray-900">Brian
+                                                    Okumu</label>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm text-gray-600 whitespace-nowrap p-4">
+                                            Tonoro
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            <div class="flex">
+                                                <p class="font-bold text-blue-600">0</p>
+                                                <p class="text-orange-600 font-bold">*</p>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="border-t-0 px-2 text-sm align-middle border-l-0 border-r-0 whitespace-nowrap p-4 font-bold">
+                                            0
+                                        </td>
+                                        <td
+                                            class="border-t-0 text-orange-600 text-sm font-medium px-2 align-middle border-l-0 border-r-0 whitespace-nowrap p-4">
+                                            Inactive
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full xl:w-4/12 lg:w-4/12 px-2">
+                    <div class="relative flex flex-col min-w-0 break-words w-full mb-8 shadow-lg rounded-lg bg-white">
+                        <div class="px-2 py-4 border-b-2">
+                            <div class="flex items-center">
+                                <div class="relative w-full max-w-full flex-grow flex-1">
+                                    <h3 class="font-bold text-xs">Commission Due</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between pr-4 mt-2 mb-2">
+                                <div></div>
+                                <div class="flex items-center">
+                                    <div
+                                        class="w-8 h-8 bg-orange-400 rounded-full inline-flex items-center justify-center text-xs text-green-600">
+                                        RO
+                                    </div>
+                                    <h3 class="font-bold text-sm pl-4">Rebecca Okumu</h3>
+                                </div>
+                            </div>
+                            <div class="text-xs pr-4 text-right">
+                                <p class="text-gray-400">Premium SOYA Beans</p>
+                                <p class="text-gray-400">Units: 13</p>
+                                <p class="text-gray-400">Date: 12 Jul 2022</p>
+                                <p class="font-bold">20,000</p>
+                            </div>
+                            <div class="text-right text-xs pr-4 pt-4">
+                                <p class="text-gray-400">African Fodder Maize</p>
+                                <p class="text-gray-400">Units: 13</p>
+                                <p class="text-gray-400">Date: 12 Jul 2022</p>
+                                <p class="font-bold">58,000</p>
+                            </div>
+                            <div class="text-right text-xs pr-4 pt-4">
+                                <p class="text-gray-400">African Fodder Maize</p>
+                                <p class="text-gray-400">Units: 25</p>
+                                <p class="text-gray-400">Date: 12 Jul 2022</p>
+                                <p class="font-bold">87000</p>
+                            </div>
+                            <div class="text-right pr-4 pt-2">
+                                <p class="text-gray-700 font-bold text-normal">Total Commission Due: <span
+                                        class="text-blue-700 font-bold">87000</span></p>
+                            </div>
+
+                            <div class="text-right text-xs pr-4 pt-2">
+                                <div class="mb-2">
+                                    <label class="block text-gray-400 text-sm font-bold mb-2" for="commissionreason">
+                                        Commission Description:
+                                    </label>
+                                    <input
+                                        class="border border-gray-400 focus:outline rounded w-3/4 py-2 px-3 text-gray-700"
+                                        id="commissionreason" type="text" placeholder="Type reason...">
+                                </div>
+                            </div>
+                            <div class="text-right pr-4">
+                                <button
+                                    class="p-1 w-1/2 rounded text-white bg-blue-600 m-1 border-2 border-gray-600">Pay
+                                    Commission</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="relative flex flex-col min-w-0 break-words w-full mb-8 shadow-lg rounded-lg bg-white">
+                        <div class="px-2 py-4 border-b-2">
+                            <div class="flex items-center">
+                                <div class="relative w-full max-w-full flex-grow flex-1">
+                                    <h3 class="font-bold text-xs">Monthly Commission</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between pr-4 mt-2 mb-2">
+                                <div></div>
+                                <div class="flex items-center">
+                                    <div
+                                        class="w-8 h-8 bg-orange-400 rounded-full inline-flex items-center justify-center text-xs text-green-600">
+                                        RO
+                                    </div>
+                                    <h3 class="font-bold text-sm pl-4">Rebecca Okumu</h3>
+                                </div>
+                            </div>
+                            <div class="text-right text-xs pr-4 pt-2">
+                                <div class="mb-2">
+                                    <label class="block text-gray-400 text-sm font-bold mb-2" for="commissionreason">
+                                        Commission Description:
+                                    </label>
+                                    <input
+                                        class="border border-gray-400 focus:outline rounded w-3/4 py-2 px-3 text-gray-700"
+                                        id="commissionreason" type="text" placeholder="Type reason...">
+                                </div>
+                            </div>
+                            <div class="text-right text-xs pr-4 pt-2">
+                                <div class="mb-2">
+                                    <label class="block text-gray-400 text-sm font-bold mb-2" for="commissionamount">
+                                        Commission Amount:
+                                    </label>
+                                    <input
+                                        class="border border-gray-400 focus:outline rounded w-3/4 py-2 px-3 text-gray-700"
+                                        id="commissionamount" type="text" placeholder="Enter Amount...">
+                                </div>
+                            </div>
+                            <div class="text-right pr-4">
+                                <button
+                                    class="p-1 w-1/2 rounded text-white bg-blue-600 m-1 border-2 border-gray-600">Pay
+                                    Commission</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>
